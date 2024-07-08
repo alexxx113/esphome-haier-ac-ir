@@ -75,6 +75,7 @@ void HaierClimate::setup_ir_cmd() {
       ac_->setSwing(kHaierAcYrw02SwingVOff);
     } else if (this->swing_mode == climate::CLIMATE_SWING_VERTICAL) {
       ac_->setSwing(kHaierAcYrw02SwingVAuto);
+      ac_->setSwing(kHaierAcYrw02SwingHAuto); 
     }
 
     ac_->setSleep(this->preset == climate::CLIMATE_PRESET_SLEEP);
