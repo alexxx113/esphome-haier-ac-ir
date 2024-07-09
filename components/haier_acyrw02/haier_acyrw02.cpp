@@ -72,11 +72,12 @@ void HaierClimate::setup_ir_cmd() {
     }
 
     if (this->swing_mode == climate::CLIMATE_SWING_OFF) {
-      ac_->setSwing(kHaierAcYrw02SwingVOff);
+      ac_->setSwingV(kHaierAcYrw02SwingVOff);
+      ac_->setSwingH(kHaierAcYrw02SwingHOff);
     } else if (this->swing_mode == climate::CLIMATE_SWING_VERTICAL) {
       ac_->setSwingV(kHaierAcYrw02SwingVAuto); 
     } else if (this->swing_mode == climate::CLIMATE_SWING_HORIZONTAL) {
-      ac_->setSwingV(kHaierAcYrw02SwingVAuto); 
+      ac_->setSwingH(kHaierAcYrw02SwingHAuto); 
     } else if (this->swing_mode == climate::CLIMATE_SWING_BOTH) {
       ac_->setSwingV(kHaierAcYrw02SwingVMiddle); 
       ac_->setSwingH(kHaierAcYrw02SwingHLeft); 
