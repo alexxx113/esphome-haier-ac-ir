@@ -77,7 +77,7 @@ void HaierClimate::setup_ir_cmd() {
       ac_->setSwingV(kHaierAcYrw02SwingVAuto); 
     } else if (this->swing_mode == climate::CLIMATE_SWING_HORIZONTAL) {
       ac_->setSwingV(kHaierAcYrw02SwingVAuto); 
-    } else if (this->swing_mode == climate::CLIMATE_SWING_BOTHL) {
+    } else if (this->swing_mode == climate::CLIMATE_SWING_BOTH) {
       ac_->setSwingV(kHaierAcYrw02SwingVMiddle); 
       ac_->setSwingH(kHaierAcYrw02SwingHLeft); 
     }
@@ -94,7 +94,7 @@ climate::ClimateTraits HaierClimate::traits() {
                               climate::CLIMATE_MODE_FAN_ONLY, climate::CLIMATE_MODE_DRY, climate::CLIMATE_MODE_AUTO});
   traits.set_supported_fan_modes(
       {climate::CLIMATE_FAN_LOW, climate::CLIMATE_FAN_MEDIUM, climate::CLIMATE_FAN_HIGH, climate::CLIMATE_FAN_AUTO});
-  traits.set_supported_swing_modes({climate::CLIMATE_SWING_OFF, climate::CLIMATE_SWING_VERTICAL});
+  traits.set_supported_swing_modes({climate::CLIMATE_SWING_OFF, climate::CLIMATE_SWING_VERTICAL, climate::CLIMATE_SWING_HORIZONTAL, climate::CLIMATE_SWING_BOTH});
   traits.set_supported_presets({climate::CLIMATE_PRESET_NONE, climate::CLIMATE_PRESET_SLEEP,
                                 climate::CLIMATE_PRESET_COMFORT, climate::CLIMATE_PRESET_BOOST});
 
