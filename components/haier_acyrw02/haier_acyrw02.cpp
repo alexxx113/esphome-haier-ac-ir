@@ -79,7 +79,7 @@ void HaierClimate::setup_ir_cmd() {
     } else if (this->swing_mode == climate::CLIMATE_SWING_HORIZONTAL) {
       ac_->setSwingH(kHaierAcYrw02SwingHAuto); 
     } else if (this->swing_mode == climate::CLIMATE_SWING_BOTH) {
-      ac_->setSwingV(kHaierAcYrw02SwingVTop); 
+      ac_->setSwingV(kHaierAc160SwingVLow); 
       ac_->setSwingH(kHaierAcYrw02SwingHLeft); 
     }
 
